@@ -1,93 +1,503 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
 }
-.wrapper {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 10px;
+html,body{
+    height: 100%;
+    width:100%;
 }
-.container {
-  position: relative;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
-  z-index: -1;
+#main{
+    overflow: hidden;
+    position: relative;
 }
-.img1 {
-  transform: translateZ(-40px) scale(6);
-}
-.img2 {
-  transform: translateZ(-20px) scale(3);
-}
-.img1,
-.img2 {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 15;
-}
-h1 {
-  position: relative;
-  top: -2rem;
-  letter-spacing: 1rem;
-  color: white;
-  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
-  font-size: 4em;
-  padding: 1rem 10rem;
-  margin: 5rem 1rem;
+font-face {    
+    font-family: a;
+    src: url(./jost-variable.ttf);
 
 }
-section {
-  background-color: rgb(88, 86, 86);
-  color: white;
-  padding: 5rem 0;
+#page1{
+      height: 100vh;
+      width: 100vw;
+      /* background-color: red; */
+      position: relative;
+
+}
+#page1>video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page1>nav{
+    height: 10vh;
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0px 30px;
+    
+}
+#page1>nav>img{
+  width: 10%;
+  padding-bottom: 40px;
+  padding-left: 3px;
+
 }
 
-.text {
-  font-size: 1.5rem;
-  padding: 0 10rem;
-  margin: 5rem 0;
+#right-nav>button{
+       position: relative;
+     padding: 10px 20px;
+     margin: 10px;
+     border-radius: 50px;
+     border: solid 1px white;
+     background-color:#0b48ec ;
+     font-size: 15px;
+    color: white;
+    z-index: 100;
 }
-.bg1 {
-  background-image: url(images/sport-1.jpg);
+   
+#bottom-page1{
+    position: absolute;
+    bottom: 20%;
+    left: 9%;
+    height: 35vh;
+    width: 40vw;
+    /* background-color: red; */
 }
-.bg2 {
-  background-image: url(images/sport-2.jpg);
+
+#bottom-page1>h1{
+    font-family: a;
+     font-size: 6vw;
+     font-weight: 100;
+     line-height: 1;
+     color: white;
+     /* background-color: green; */
+    
 }
-.bg3 {
-  background-image: url(images/sport-3.jpg);
+#lower{
+    position: relative;
+    height: 35%;
+    width: 100%;
+    bottom: 0%;
+    /* background-color: aqua; */
+    
 }
-.bg {
-  position:relative;
-  width: 100%;
-  background-attachment: fixed;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
+#lower{
+    position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     color: white;
+     margin: 10px;
 }
-.desc {
-  position: absolute;
-  background-color: white;
-  padding: 0.5rem 2.5rem;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: black;
-  font-size: 3.5rem;
-  font-weight: 600;
-  border: solid 3px black;
+#lower>button{
+    width: 15vw;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 900;
+     border-radius: 3vw;
+    border: solid 1px white;
+     background-color: white;
+     font-size: 16px;
+       font-weight: 900;
+       z-index: 100;
 }
-.desc:hover{
-  filter: drop-shadow(0 0 10px #000000 );
+#lower>h4{
+    font-family: a;
+      font-size: 1.3vw;
+      font-weight:100 ;
+      color: white;
+      line-height: 2;
+      white-space: wrap;
+
 }
-@media(max-width:550px){
-  h1{
-       opacity: 0;
-  }
+.bt-change:hover{
+    background-color: black !important;
+    color: white;
+    border: solid 1px white;
+    
+}
+
+#page2{
+    display: flex;
+    font-family: a;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+    position: relative;
+    padding: 0vw 8vw;
+    color: white;
+   
+}
+
+#page2>h2{
+    font-family: a;
+   font-weight: 10 0;
+   margin-bottom: 2vw;
+
+
+}
+#page2>h1{
+    font-family: a;
+    width: 90%;
+    font-size: 4vw;
+    line-height:1.4;
+    font-weight: 100;
+    color: #dadada69;
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+
+}
+#page3>canvas{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+    
+}
+
+#page4{
+    display: flex;
+    font-family: a;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+    position: relative;
+    padding: 0vw 8vw;
+    color: white;
+   
+}
+
+#page4>h2{
+    font-family: a;
+   font-weight: 10 0;
+   margin-bottom: 2vw;
+
+
+}
+#page4>h1{
+    font-family: a;
+    width: 90%;
+    font-size: 4vw;
+    line-height:1.4;
+    font-weight: 100;
+    color: #dadada69;
+}
+
+#page5{
+    max-height: 100vh;
+    width: 100vw;
+    position: relative;
+
+}
+#page5>canvas{
+    max-height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+    
+}
+
+#page6{
+    display: flex;
+    font-family: a;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+    position: relative;
+    padding: 0vw 8vw;
+    color: white;
+   
+}
+
+#page6>h2{
+    font-family: a;
+   font-weight: 10 0;
+   margin-bottom: 2vw;
+
+
+}
+#page6>h1{
+    font-family: a;
+    width: 90%;
+    font-size: 4vw;
+    line-height:1.4;
+    font-weight: 100;
+    color: #dadada69;
+}
+#page7{
+       position: relative;
+       height: 100vh;
+       width:100vw;
+       background-color: #0a3cce;
+}
+#page7>canvas{
+    position: relative;
+    max-width: 100vh;
+    max-width: 100vw;
+
+}
+
+#page7-cir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+#page7-cir-inner{
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+#page8{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+     background-color: #0a3cce;
+}
+#page8>video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page8-bottom{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+    text-align: center;
+
+}
+#page8-bottom>h1{
+    color: white;
+    font-size: 5vw;
+    font-weight: 100;
+    margin-bottom: 2vw;
+
+}
+#page8-bottom>button{
+    padding: 20px 30px;
+    border-radius: 2vw;
+    background-origin: 50px;
+    border: none;
+    background-color: white;
+    color: #0a3cce;
+}
+#page9{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+  
+}
+.left9{
+    height: 100%;
+    width: 40%;
+    position: relative;
+    font-family: a;
+}
+.left9>h1{
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    transform: translateY(-50%);
+    font-size: 5vw;
+    font-weight: 100;
+    color: #fff;
+    line-height: 1;
+}
+.right9{
+    height: 100%;
+    width: 60%;
+    position: relative;
+}
+.right9-center{
+    height: 50%;
+    width: 85%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("https://thisismagma.com/wp-content/uploads/2023/04/magma.wp2.cubdev.com-home-1.jpeg");
+    background-size: cover;
+    left: 5%;
+}
+#page10{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+}
+.right10{
+    height: 100%;
+    width: 60%;
+    position: relative;
+    left: 40%;
+}
+.right10-inner{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    height: 33.3%;
+    width: 100%;
+    font-family: a;
+    color: #fff;
+}
+.right10-inner>h1{
+    font-size: 2vw;
+}
+.right10-inner>p{
+    margin-top: 2vw;
+    font-size: 1.3vw;
+    width: 80%;
+}
+#page12{
+
+     position: relative;
+     height: 100vh;
+     width: 100vw;
+     background-color: #022680;
+
+}
+.page12-inner{
+    position: absolute;
+    top: 40%;
+    right:10%;
+    color: white;
+    font-family: a;
+
+}
+.page12-inner>h1{
+    font-size: 5vw;
+    font-weight: 100;
+     margin-bottom:2vw ;
+
+}
+.page12-inner>p{
+    font-size: 1.3vw;
+    font-weight: 100;
+    line-height: 2;
+}
+
+#page13{
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+    background-color: black;
+    color: white;
+    font-family: a;
+    padding: 7vw 10vw ;
+}
+
+#page13>h1{
+       font-size: 8vw;
+       line-height: 1;
+       font-weight: 100;
+       margin-bottom: 2vw;
+}
+#page13>button{
+    padding: 18px 30px;
+    border: none;
+    background-color:#0a3cce ;
+    color: white;
+     border-radius: 50px;
+    
+}
+
+#page14{
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    background-color: black;
+}
+.page14-inner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 5vw;
+    font-family: a;
+    height: 33.3%;
+    width: 100%;
+    color: #fff;
+    border-top: .5px solid #ffffff5c;
+    border-bottom: .5px solid #ffffff48;
+} 
+.page14-inner>i{
+    font-weight: 100;
+    font-size: 2.4vw;
+    position: relative;
+    z-index: 9999;
+    color: white;
+}
+.page14-inner>h1{
+    font-size: 3vw;
+    font-weight: 100;
+    position: relative;
+    z-index: 9999;
+}
+
+.center14{
+    height: 0%;
+    width: 100%;
+    background-color: #0a3cce;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all ease .5s;
+}
+
+
+.page14-inner:hover .center14{
+    height: 100%;
+} 
+
+#page15{
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+    position: relative;
+    background-color: black;
+    color: white;
+
+}
+
+#page15>i{
+    font-weight: 100;
+    font-size: 1.4vw;
+    position: relative;
+    padding: 1.5vw ;
+    left: 3vw;
+}
+#page15>h4{
+    font-size: 1.4vw;
+    font-family: a;
+    font-weight: 100;
+    padding: 1.5vw ;
 }
