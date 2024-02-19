@@ -13,7 +13,7 @@ html,body{
 }
 font-face {    
     font-family: a;
-    src: url(./jost-variable.ttf);
+    src: url("jost-variable.ttf");
 
 }
 #page1{
